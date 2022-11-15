@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, ManyToMany, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToMany, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Subject } from "./Subject";
 import { Video } from "./Video";
 
@@ -10,7 +10,7 @@ export class Room{
     @Column({type: 'text'})
     name: string
 
-    @Column({ type: 'text'})
+    @Column({ type: 'text', nullable: true})
     description: string
 
     @OneToMany(() => Video, video => video.room)
