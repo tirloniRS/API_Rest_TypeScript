@@ -6,6 +6,7 @@ const controller = new SubjectController()
 
 routes.post('/subject', controller.create)
 routes.post('/room', controller.create)
+routes.post('/room/')
 
 
 
